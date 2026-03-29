@@ -1,0 +1,11 @@
+name: Deployment 2
+on:
+  push:
+    branches:
+      - main
+jobs:
+  runs-on: ubuntu-latest
+  steps: 
+  - name: Output event
+    run: echo " ${{ toJson(github.event) }}"
+    
