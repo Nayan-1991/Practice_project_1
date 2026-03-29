@@ -4,8 +4,8 @@ on:
     branches:
       - main
 jobs:
-  runs-on: ubuntu-latest
-  steps: 
-  - name: Output event
-    run: echo " ${{ toJson(github.event) }}"
-    
+  deploy:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Output event
+        run: echo "${{ toJson(github.event) }}"
